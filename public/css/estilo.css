@@ -748,3 +748,8 @@ p.datos {
 .link {
 	color: #EE7D18;
 }
+
+
+#btnAG{
+	position: fixed;
+}
