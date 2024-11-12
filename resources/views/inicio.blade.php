@@ -1,8 +1,7 @@
 <?php
-   $page="index";
+   $page="";
    $title="Impruneta";
    require_once("include/header.php");
-   require_once("call_me/button.php");
 ?>
     <div class="fullwidthbanner-container">
         <div class="fullwidthbanner">

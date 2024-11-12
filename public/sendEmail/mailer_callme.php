@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 function sendEmail()
 {
     // Recibir datos del formulario 
-    $page_callme = $_REQUEST[''];
+    $page_callme = $_REQUEST['page_callme'];
     $nombre_callme = $_REQUEST['nombre_callme'];
     $dni_callme = $_REQUEST['dni_callme'];
     $celular_callme = $_REQUEST['celular_callme'];
@@ -27,7 +27,7 @@ function sendEmail()
     $mail_callme->isSMTP();
     $mail_callme->Host = 'mail.smtp2go.com';               // Host del servidor SMTP
     $mail_callme->SMTPAuth = true;                         // Habilitar autenticación SMTP
-    $mail_callme->Username = 'webform@imprunetasa.com';        // Tu dirección de correo electrónico
+    $mail_callme->Username = 'webform@imprunetasa.com';    // Tu dirección de correo electrónico
     $mail_callme->Password = 'QxR8OaRehnYQYzY4';           // Tu contraseña de correo electrónico
     $mail_callme->SMTPSecure = 'tls';                      // Habilitar cifrado TLS
     $mail_callme->Port = 587;                              // Puerto SMTP
@@ -36,9 +36,6 @@ function sendEmail()
     // $mail_callme->Debugoutput = 'html'; // Salida de depuración en HTML
     
     //generacion de body(contendo del correo)
-
-
-
     $body = "
         <html>
             <head>
@@ -58,11 +55,11 @@ function sendEmail()
 
     // Configurar el contenido del correo electrónico
     $mail_callme->setFrom('webform@imprunetasa.com', $nombre_callme);
-    $mail_callme->addAddress('lm30540@gmail.com', 'Llámame - Impruneta');
+    $mail_callme->addAddress('info@imprunetasa.com', 'Llámame - Impruneta');
     $mail_callme->Subject = $asunto_callme;
 
     // Permite que el contenido del correo sea interpretado como HTML.
-    $mail_callme->isHTML(true);                             // Enviar el correo en formato HTML
+    $mail_callme->isHTML(true); // Enviar el correo en formato HTML
     $mail_callme->Body = $body;
 
 
@@ -76,7 +73,7 @@ function sendEmail()
     }
     
     //creamos la url de manera dinamica
-    $url = "http://localhost/imprunetasa_com_new/public/". $page_callme."?messageAlert=" . urlencode($messageAlert);
+    $url = "https://imprunetasa.com/". $page_callme."?messageAlert=" . urlencode($messageAlert);
     // Redirigir al archivo HTML con el mensaje
     header("Location: " . $url);
     exit(); // salir después de redirigir

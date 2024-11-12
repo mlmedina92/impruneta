@@ -1,5 +1,5 @@
 <?php
-    $page="servicios";
+    $page="servicios.php";
     $title="Servicios - Impruneta";
     require_once("include/header.php");
 ?>

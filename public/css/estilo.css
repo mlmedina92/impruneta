@@ -549,7 +549,9 @@ form input[type="submit"] {
 	padding-left: 32%;
 }
 
-.cian input[type="text"] {
+.cian input[type="text"] ,
+.cian input[type="tel"] ,
+.cian input[type="email"] {
 	border-color: #fff;
 	background: #AAF0FF;
 	max-width: 400px;

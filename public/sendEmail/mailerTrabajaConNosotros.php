@@ -1,10 +1,5 @@
 <?php
-// Incluir la clase de PHPMailer
-// require 'PHPMailer-master\src\PHPMailer.php';
 
-// use PHPMailer\PHPMailer\PHPMailer;
-// require 'path/to/PHPMailer/src/PHPMailer.php';
-// require 'vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 
@@ -23,7 +18,6 @@ function sendEmail()
     $nombreTrabajaConNosotros = $_REQUEST['nameTrabajaConNosotros'];
     $emailTrabajaConNosotros = $_REQUEST['emailTrabajaConNosotros'];
     $telefonoTrabajaConNosotros = $_REQUEST['telefonoTrabajaConNosotros'];
-    // $CVTrabajaConNosotros = $_FILES['my_fileTrabajaConNosotros'];
     $asuntoTrabajaConNosotros = "Entrega de CV - Impruneta";
 
 
@@ -39,10 +33,9 @@ function sendEmail()
 
     // $mailTrabajaConNosotros->SMTPDebug = 2; // Modo depuración detallado
     // $mailTrabajaConNosotros->Debugoutput = 'html'; // Salida de depuración en HTML
-    //generacion de body(contendo del correo)
 
 
-
+    //generacion de body(contenido del correo)
     $body = "
     <html>
         <head>
@@ -86,7 +79,9 @@ function sendEmail()
         $message = 'El mensaje pudo ser enviado';
         $code='green';
     }
+
+    $url ="http://localhost/imprunetasa_com_new/public/trabaja-con-nosotros.php?message=" . urlencode($message)."&code=" . urlencode($code);
     // Redirigir al archivo HTML con el mensaje
-    header("Location: http://localhost/riavere_com/public/trabaja.php?message=" . urlencode($message)."&code=" . urlencode($code));
+    header("Location: " . $url);
     exit(); // salir después de redirigir
 }

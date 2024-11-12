@@ -1,5 +1,5 @@
 <?php
-    $page="beneficios";
+    $page="beneficios.php";
     $title="Beneficios - Impruneta";
     require_once("include/header.php");
 ?>

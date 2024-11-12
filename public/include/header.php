@@ -32,6 +32,18 @@
 </head>
 
 <body>
+<?php
+    if (isset($_GET['messageAlert'])) {
+        echo "<script>
+            setTimeout(function() {
+                alert('" . htmlspecialchars($_GET['messageAlert'], ENT_QUOTES, 'UTF-8') . "');
+            }, 2000);
+        </script>";
+    }
+?>
+
+    <?php require_once("call_me/button.php"); ?>
+
     <div id="barra-top">
         <h1>Impruneta posee la capacidad de crear soluciones a medida de manera flexible, rápida y eficaz.</h1>
         <div class="info">
@@ -50,12 +62,7 @@
 
             <div class="menu-wrapp">
                 <nav>
-
                     <ul class="menu">
-
-
-
-
                         <p>
                         <p>
                             <li class="<?php echo ($page == "nosotros") ? "active" : ""; ?>"><a href="nosotros.php">Nosotros</a></li>

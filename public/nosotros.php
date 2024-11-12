@@ -1,5 +1,5 @@
 <?php
-    $page="nosotros";
+    $page="nosotros.php";
     $title="Quiénes Somos - Impruneta";
     require_once("include/header.php");
 ?>

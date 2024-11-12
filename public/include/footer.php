@@ -14,9 +14,9 @@
     </div>
 
 
-<script data-cfasync='false'>
+<!-- <script data-cfasync='false'>
 AC_chatbot = { hashbot: '#fconsultas' }  
-function loadAsisteClick(callback) { var AsisteClick = document.createElement('script'); AsisteClick.onload = callback; AsisteClick.async = true; AsisteClick.src = 'https://app.asisteclick.com/v3/widget.php?id=0716041-4899&async=1&floating=DL&deptid=0&layer=1'; var s0 = document.getElementsByTagName('script')[0]; s0.parentNode.insertBefore(AsisteClick, s0); } loadAsisteClick(function() {} ); </script>
+function loadAsisteClick(callback) { var AsisteClick = document.createElement('script'); AsisteClick.onload = callback; AsisteClick.async = true; AsisteClick.src = 'https://app.asisteclick.com/v3/widget.php?id=0716041-4899&async=1&floating=DL&deptid=0&layer=1'; var s0 = document.getElementsByTagName('script')[0]; s0.parentNode.insertBefore(AsisteClick, s0); } loadAsisteClick(function() {} ); </script> -->
 
 
 </body>
