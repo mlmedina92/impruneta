@@ -55,7 +55,7 @@ function sendEmail()
 
     // Configurar el contenido del correo electrónico
     $mailTrabajaConNosotros->setFrom($emailTrabajaConNosotros, $nombreTrabajaConNosotros);
-    $mailTrabajaConNosotros->addAddress('lm30540@gmail.com', 'Impruneta');
+    $mailTrabajaConNosotros->addAddress('info@imprunetasa.com', 'Impruneta');
     $mailTrabajaConNosotros->Subject = $asuntoTrabajaConNosotros;
 
     // Permite que el contenido del correo sea interpretado como HTML.
@@ -80,7 +80,7 @@ function sendEmail()
         $code='green';
     }
 
-    $url ="http://localhost/imprunetasa_com_new/public/trabaja-con-nosotros.php?message=" . urlencode($message)."&code=" . urlencode($code);
+    $url ="https://imprunetasa.com/trabaja-con-nosotros.php?message=" . urlencode($message)."&code=" . urlencode($code);
     // Redirigir al archivo HTML con el mensaje
     header("Location: " . $url);
     exit(); // salir después de redirigir

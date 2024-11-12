@@ -62,7 +62,7 @@ function sendEmail()
 
     // Configurar el contenido del correo electrónico
     $mailFormContactoGeneral->setFrom($emailFormContactoGeneral, $nombreFormContactoGeneral);
-    $mailFormContactoGeneral->addAddress('info@imprunetasa.com ', 'Impruneta');
+    $mailFormContactoGeneral->addAddress('info@imprunetasa.com', 'Impruneta');
     $mailFormContactoGeneral->Subject = $asuntoFormContactoGeneral;
 
     // Permite que el contenido del correo sea interpretado como HTML.
