@@ -9,6 +9,14 @@
     <h2>Llámame!<i class="fa fa-phone my-float " aria-hidden="true"></i></h2>
 </a> -->
 
+<?php
+if (isset($_GET['messageAlert'])) {
+  echo "<script>alert('" . htmlspecialchars($_GET['messageAlert'], ENT_QUOTES, 'UTF-8') . "');</script>";
+}
+?>
+
+
+
 <button id="btnOpenForm" class="callme_button_with_text">
   <div class="callme_button_text">
     <i class="fa fa-phone my-float " aria-hidden="true"></i> Llámame!
@@ -21,7 +29,7 @@
     <button id="btnCloseForm" class="close-button">X</button>
     <h1 style="padding-left: 40%; padding-bottom: 10px; "> <i class="fa fa-phone-square my-float " aria-hidden="true"></i> Llámame! </h1>
     <!-- <p>For more information. Please complete this form.</p> -->
-    <form action="sendEmail/mail_callme.php" method="POST">
+    <form action=".sendEmail/maierl_callme.php" method="POST">
       <div class="form-group">
         <label for="nombre_callme">Nombre</label>
         <input type="text" id="nombre_callme" name="nombre_callme" class="form-control form-input " required />
@@ -42,9 +50,8 @@
         <input class="form-input" style="width: 8%; margin-top:0px; position: fixed; "     name="code" id="code" />
       </div> -->
 
-      <input type="hidden" name="pagina_callme" value="<?php echo $page?>">
 
-      <input class="button_submit" style="background: #FF822F; padding: 6px 20px; color: white; border: solid 1px #FD6500; border-radius: 3px; font-size: 18px; cursor: pointer; margin-left: 33%; margin-top: 5px;" type="submit" name="enviarform" value="Enviar">
+      <input class="button_submit" style="background: #FF822F; padding: 6px 20px; color: white; border: solid 1px #FD6500; border-radius: 3px; font-size: 18px; cursor: pointer; margin-left: 33%; margin-top: 5px;" type="submit" value="Enviar">
     </form>
   </div>
 </div>

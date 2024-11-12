@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     sendEmail();
 }
 
+
 function sendEmail()
 {
     // Recibir datos del formulario 
@@ -31,8 +32,9 @@ function sendEmail()
     $mail_callme->SMTPSecure = 'tls';                      // Habilitar cifrado TLS
     $mail_callme->Port = 587;                              // Puerto SMTP
 
-    $mail_callme->SMTPDebug = 2; // Modo depuración detallado
-    $mail_callme->Debugoutput = 'html'; // Salida de depuración en HTML
+    // $mail_callme->SMTPDebug = 2; // Modo depuración detallado
+    // $mail_callme->Debugoutput = 'html'; // Salida de depuración en HTML
+    
     //generacion de body(contendo del correo)
 
 
@@ -55,8 +57,8 @@ function sendEmail()
 
 
     // Configurar el contenido del correo electrónico
-    $mail_callme->setFrom('webform@riavere.com', $nombre_callme);
-    $mail_callme->addAddress('lm30540@gmail.com', 'Impruneta');
+    $mail_callme->setFrom('webform@imprunetasa.com', $nombre_callme);
+    $mail_callme->addAddress('lm30540@gmail.com', 'Llámame - Impruneta');
     $mail_callme->Subject = $asunto_callme;
 
     // Permite que el contenido del correo sea interpretado como HTML.

@@ -28,7 +28,6 @@
             });
         });
     </script>
-    <?php require_once("call_me/button.php"); ?>
 
 </head>
 
@@ -72,4 +71,3 @@
     <div id="btnAG" class="animated infinite bounce">
         <a href="https://imprunetasa.com/consulta-deuda" target="_blank" class="textoAG">Resolvé tu deuda aquí</a>
     </div>
-   

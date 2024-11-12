@@ -17,7 +17,10 @@ function sendEmail()
     $pageFormContactoGeneral = $_REQUEST['pageFormContactoGeneral'];
     $nombreFormContactoGeneral = $_REQUEST['nameFormContactoGeneral'];
     $emailFormContactoGeneral = $_REQUEST['emailFormContactoGeneral'];
+    $titleFormContactoGeneral = $_REQUEST['titleFormContactoGeneral'];
     $mensajeFormContactoGeneral = $_REQUEST['messageFormContactoGeneral'];
+    $telFormContactoGeneral = $_REQUEST['telFormContactoGeneral'];
+    $personaFormContactoGeneral = $_REQUEST['personaFormContactoGeneral'];
     $asuntoFormContactoGeneral = "Formulario de contacto - Web Impruneta";
 
 
@@ -46,7 +49,10 @@ function sendEmail()
                 <ul>
                     <li><strong>Nombre:</strong> {$nombreFormContactoGeneral}</li>
                     <li><strong>Email:</strong> {$emailFormContactoGeneral}</li>
-                    <li><strong>Descripcion:</strong> {$mensajeFormContactoGeneral}</li>
+                    <li><strong>Titulo:</strong> {$titleFormContactoGeneral}</li>
+                    <li><strong>Mensaje:</strong> {$mensajeFormContactoGeneral}</li>
+                    <li><strong>Teléfono de contacto:</strong> {$telFormContactoGeneral}</li>
+                    <li><strong>Persona de contacto:</strong> {$personaFormContactoGeneral}</li>
                 </ul>
             </body>
         </html>
@@ -56,7 +62,7 @@ function sendEmail()
 
     // Configurar el contenido del correo electrónico
     $mailFormContactoGeneral->setFrom($emailFormContactoGeneral, $nombreFormContactoGeneral);
-    $mailFormContactoGeneral->addAddress('lm30540@gmail.com', 'Impruneta');
+    $mailFormContactoGeneral->addAddress('info@imprunetasa.com ', 'Impruneta');
     $mailFormContactoGeneral->Subject = $asuntoFormContactoGeneral;
 
     // Permite que el contenido del correo sea interpretado como HTML.
@@ -76,7 +82,7 @@ function sendEmail()
     }
 
     //creamos la url de manera dinamica
-    $url = "http://localhost/riavere_com/public/". $pageFormContactoGeneral."?message=" . urlencode($message) . "&code=" . urlencode($code);
+    $url = "https://imprunetasa.com/contacto.php?message=" . urlencode($message) . "&code=" . urlencode($code);
     // Redirigir al archivo HTML con el mensaje
     header("Location: " . $url);
     exit(); // salir después de redirigir
