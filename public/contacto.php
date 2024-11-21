@@ -81,7 +81,8 @@
                 <p class="datos" id="whatsapp"><span class="ico whatsapp"></span>+54 9 11 50035249</p>
                 <div class="map-wrapper mtop20">
                     <div class="gmap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.534895889416!2d-57.91676192448711!3d-34.94319987283451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2ef3498f1e117%3A0x6a768620523b065!2sC.%208%20A%2C%20B1914%20Villa%20Elvira%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1731415913169!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80372.14064384895!2d-58.52917614138348!3d-34.58227315269716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5c303ea23a5%3A0xff28be77ad81f183!2sConesa%20812%2C%20C1426AQR%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1732219467909!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
